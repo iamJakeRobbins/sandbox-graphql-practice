@@ -48,7 +48,6 @@ npm-mongo@2.2.33
 ordered-dict@1.0.9
 promise@0.10.0
 random@1.0.10
-reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
 routepolicy@1.0.12
