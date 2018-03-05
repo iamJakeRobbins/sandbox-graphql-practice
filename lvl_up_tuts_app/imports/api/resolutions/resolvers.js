@@ -1,10 +1,6 @@
 import Resolutions from './resolutions';
 
-
 // Resolutions.remove({})
-// Resolutions.insert({
-// 	name: "test Res",
-// })
 
 export default{
 	Query: {
@@ -14,11 +10,11 @@ export default{
 	},
 
 	Mutation: {
-		createResolution(){
-			console.log('got here');
-			// const resolutionId = Resolutions.insert({
-			// 	name: "test Res"
-			// })
+		createResolution(obj, { name }, context){
+			const resolutionId = Resolutions.insert({
+				name
+			})
+			return Resolutions.findOne(resolutionId);
 		}
 	}
 
