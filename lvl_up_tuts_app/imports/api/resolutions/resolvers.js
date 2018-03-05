@@ -6,8 +6,6 @@ import Resolutions from './resolutions';
 // 	name: "test Res",
 // })
 
-
-
 export default{
 	Query: {
 		resolutions(){
