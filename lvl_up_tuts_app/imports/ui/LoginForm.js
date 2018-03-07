@@ -7,9 +7,12 @@ export default class LoginForm extends Component {
 		e.preventDefault();
 		Meteor.loginWithPassword(this.email.value, this.password.value, error =>{
 			console.log(error);
+			if(!error) {
+				this.props.client.resetStore();
+			}
 		}
-	)
-	}
+	);
+};
 
 	render(){
 		return(
