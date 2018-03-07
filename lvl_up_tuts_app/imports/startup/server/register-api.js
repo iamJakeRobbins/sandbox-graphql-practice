@@ -4,17 +4,23 @@ import merge from 'lodash/merge';
 
 import ResolutionsSchema from '../../api/resolutions/Resolutions.graphql';
 import ResolutionsResolvers from '../../api/resolutions/resolvers'
+import UsersSchema from '../../api/users/User.graphql'
+import UsersResolvers from '../../api/users/resolvers'
+
+// 
 // hello
 // test resume at vid 18
 const testSchema = `
 type Query {
 	hi: String
 	resolutions: [Resolution]
+	user: User
 }
 `;
 const typeDefs = [
 	testSchema,
-	ResolutionsSchema
+	ResolutionsSchema,
+	UsersSchema
 ];
 
 const testResolvers = {
@@ -26,7 +32,7 @@ const testResolvers = {
 };
 
 const resolvers = merge(
-	testResolvers, ResolutionsResolvers
+	testResolvers, ResolutionsResolvers, UsersResolvers
 )
 
 const schema = makeExecutableSchema({
