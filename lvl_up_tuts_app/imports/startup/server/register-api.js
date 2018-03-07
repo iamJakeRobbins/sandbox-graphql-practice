@@ -7,32 +7,17 @@ import ResolutionsResolvers from '../../api/resolutions/resolvers'
 import UsersSchema from '../../api/users/User.graphql'
 import UsersResolvers from '../../api/users/resolvers'
 
-// 
-// hello
+//
+// hellos
 // test resume at vid 18
-const testSchema = `
-type Query {
-	hi: String
-	resolutions: [Resolution]
-	user: User
-}
-`;
+
 const typeDefs = [
-	testSchema,
 	ResolutionsSchema,
 	UsersSchema
 ];
 
-const testResolvers = {
-	Query: {
-		hi(){
-			return "Hello Level Up";
-		}
-	}
-};
-
 const resolvers = merge(
-	testResolvers, ResolutionsResolvers, UsersResolvers
+	ResolutionsResolvers, UsersResolvers
 )
 
 const schema = makeExecutableSchema({
