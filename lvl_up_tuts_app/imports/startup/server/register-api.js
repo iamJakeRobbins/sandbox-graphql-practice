@@ -10,7 +10,7 @@ import ResolutionsResolvers from "../../api/resolutions/resolvers";
 import UsersSchema from "../../api/users/User.graphql";
 import UsersResolvers from "../../api/users/resolvers";
 
-// hkssslll
+// hksssllls
 
 const typeDefs = [GoalsSchema, ResolutionsSchema, UsersSchema];
 
