@@ -28,7 +28,7 @@ class GoalForm extends Component {
 		return (
 			<div>
 				<input type="text" ref={input => (this.name = input)} />
-				<button onClick={this.submitForm}>Submit</button>
+				<button onClick={this.submitForm}>Add a Goal</button>
 			</div>
 		);
 	}
