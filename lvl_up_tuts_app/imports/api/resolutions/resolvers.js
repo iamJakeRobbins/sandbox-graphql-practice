@@ -9,9 +9,8 @@ export default{
 	},
 
 	Resolution: {
-		goals: resolution => {
+		goals: resolution =>
 			Goals.find({resolutionId: resolution._id}).fetch()
-		}
 	},
 
 	Mutation: {
